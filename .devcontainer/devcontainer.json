@@ -2,11 +2,10 @@
   "name": "NATION Coder (OpenHands)",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {},
-    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.12" },
     "ghcr.io/devcontainers/features/rust:1": {},
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" }
   },
-  "onCreateCommand": "mkdir -p ~/nation/coder",
+  "onCreateCommand": "mkdir -p ~/nation/coder && sudo apt-get update -qq && sudo apt-get install -y -qq curl",
   "remoteUser": "codespace"
 }
